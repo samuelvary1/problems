@@ -28,3 +28,19 @@ puts(
   'longest_word("abc def abcde") == "abcde": ' +
   (longest_word('abc def abcde') == 'abcde').to_s
 )
+
+
+# how would you write the method to return the shortest word?
+
+def shortest_word(string)
+	words = string.split(" ")
+
+	words.sort! {|a, b| a.length <=> b.length }
+
+	shortest = words[0]
+
+	puts "The shortest word is #{shortest}!"
+end
+
+
+# how could you write it to say there is a tie between multiple words, either longest or shortest?
